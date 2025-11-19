@@ -1,88 +1,33 @@
 <!-- _includes/header.html -->
-<header id="siteHeader" class="site-header">
-  <!-- TOP ROW: mobile shows compact; desktop shows full top row -->
-  <div class="top-row container">
-    <!-- MOBILE: compact (logo + title + menu icon) -->
-    <div class="mobile-header mobile-only">
-      <div class="mobile-left">
-        <img src="{{ '/assets/logo.png' | relative_url }}" alt="logo" class="logo">
-        <div class="site-title">
-          <span class="name">RokomariPromoCode</span>
-        </div>
-      </div>
-      <button id="menuToggle" aria-label="Open menu" class="hamburger">☰</button>
+<header class="modern-header">
+  <div class="header-container container">
+    <div class="header-logo">
+      <a href="{{ '/' | relative_url }}">
+        <img src="https://via.placeholder.com/150x45?text=MyLogo" alt="Logo">
+      </a>
     </div>
 
-    <!-- DESKTOP: full header (logo + title + socials + search) -->
-    <div class="desktop-header desktop-only">
-      <div class="brand">
-        <img src="{{ '/assets/logo.png' | relative_url }}" alt="logo" class="logo">
-        <div class="site-title">
-          <span class="name">RokomariPromoCode</span>
-          <small class="tag">Affiliate deals & summaries</small>
-        </div>
+    <div class="header-search-wrapper">
+      <div class="search-box">
+        <input type="text" id="header-search-input" placeholder="ক্যাটাগরি, বই বা লেখকের নাম খুঁজুন..." autocomplete="off">
+        <i class="fas fa-search search-icon-btn" id="search-lens"></i>
+        <i class="fas fa-times clear-btn" id="search-clear"></i>
       </div>
+      <div class="search-results-dropdown" id="header-search-results"></div>
+    </div>
 
-      <div class="desktop-right">
-        <div class="socials">
-          <a href="#" class="social" aria-label="Facebook">f</a>
-          <a href="#" class="social" aria-label="Instagram">ig</a>
-          <a href="#" class="social" aria-label="YouTube">yt</a>
-        </div>
+    <div class="header-menu">
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/books.html' | relative_url }}">Books</a></li>
+        <li><a href="{{ '/electronics.html' | relative_url }}">Electronics</a></li>
+        <li><a href="{{ '/groceries.html' | relative_url }}">Groceries</a></li>
+        <li><a href="{{ '/ghorer_bazar.html' | relative_url }}">Ghorer Bazar</a></li>
+      </ul>
 
-        <div class="search-wrap">
-          <input id="globalSearch" type="search" placeholder="Search title, author, category..." />
-          <button id="searchBtn">🔍</button>
-        </div>
+      <div class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
   </div>
-
-  <!-- SECOND ROW (Desktop only): professional menu bar line -->
-  <nav class="menu-row desktop-only">
-    <div class="container menu-row-inner">
-      <ul id="menuItems" class="menu inline-menu">
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Latest</a></li>
-        <li><a href="#">Offers</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <!-- optional: small right-aligned secondary menu -->
-      <div class="menu-actions">
-        <a href="#" class="small-link">Deals</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MOBILE SLIDE MENU (slides from right to left) -->
-  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <button id="mobileMenuClose" class="mobile-close" aria-label="Close menu">✕</button>
-
-      <!-- SEARCH IN MOBILE MENU -->
-      <div class="mobile-search">
-        <input id="mobileSearch" type="search" placeholder="Search title, author, category..." />
-        <button id="mobileSearchBtn">🔍</button>
-      </div>
-
-      <nav class="mobile-nav">
-        <ul>
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">Latest</a></li>
-          <li><a href="#">Offers</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="mobile-socials">
-        <a href="#" class="social">f</a>
-        <a href="#" class="social">ig</a>
-        <a href="#" class="social">yt</a>
-      </div>
-    </div>
-  </aside>
 </header>
