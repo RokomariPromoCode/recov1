@@ -1,4 +1,4 @@
 title: Rokomari Promo Code
 description: Buy Rokomari books with discount.
-theme: null
-baseurl: "/trial"
+baseurl: ""  # set if your Pages site uses a subpath (e.g. "/trial")
+
